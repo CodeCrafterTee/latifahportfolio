@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Latifah Mmadi | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #C0207D;
+      --secondary: #f5f0e6;
+      --accent: #f3b622;
+      --dark: #222;
+      --light: #fff8f3;
+      --white: #fff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--secondary);
+      color: var(--dark);
+      line-height: 1.7;
+      scroll-behavior: smooth;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: var(--light);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    header div {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    header nav a {
+      margin: 0 15px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    header nav a:hover {
+      color: var(--primary);
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #E7DDFF, #fdf6f0);
+      text-align: center;
+      position: relative;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 6rem;
+      color: var(--dark);
+      position: relative;
+      z-index: 2;
+    }
+
+    .layered-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 6rem;
+      color: transparent;
+      -webkit-text-stroke: 1px var(--accent);
+      opacity: 0.1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+
+    .scroll-down {
+      position: absolute;
+      bottom: 40px;
+      padding: 12px 28px;
+      background-color: var(--primary);
+      color: var(--white);
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      animation: bounce 2s infinite;
+    }
+
+    .scroll-down:hover {
+      transform: translateY(-5px);
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .section {
+      padding: 100px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section h2 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 40px;
+      color: var(--primary);
+    }
+
+    .about p {
+      font-size: 1.1rem;
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+    }
+
+    .card {
+      background-color: var(--light);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.07);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      color: var(--primary);
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 30px;
+    }
+
+    .skill {
+      background-color: var(--dark);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      font-size: 0.95rem;
+      transition: background 0.3s;
+    }
+
+    .skill img {
+      width: 20px;
+      margin-right: 8px;
+    }
+
+    .contact {
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .contact-box {
+      background: var(--dark);
+      color: white;
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      font-size: 1rem;
+    }
+
+    .contact-item img {
+      width: 24px;
+      filter: brightness(0) invert(1);
+    }
+
+    footer {
+      background-color: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1,
+      .layered-text {
+        font-size: 3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div>LATIFAH MMADI</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>PORTFOLIO</h1>
+    <div class="layered-text">PORTFOLIO</div>
+    <div class="scroll-down" onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' })">Scroll Down</div>
+  </section>
+
+  <section class="section about" id="about">
+    <h2>Hello, I’m Latifah Mmadi!</h2>
+    <p>
+      A final-year computer science student with a passion for volunteering, continuous learning, and gaining new skills. I am a fast learner, quick on my feet, and maintain an optimistic attitude. I thrive under pressure and bring creativity and dedication to all my work.
+      <br><br>
+      I am equally comfortable working independently or as part of a team, and pride myself on being both analytical, attentive, and creative. My career aspiration is to become a full-stack software engineer.
+    </p>
+  </section>
+
+  <section class="section" id="work">
+    <h2>Education & Certifications</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Education</h3>
+        <p><strong>2023 - Present:</strong> BSc Computer Science, Eduvos</p>
+        <p><strong>2018 - 2022:</strong> NSC, Roosevelt High School</p>
+      </div>
+      <div class="card">
+        <h3>Certifications</h3>
+        <ul style="padding-left: 20px;">
+          <li>Microsoft Office 365 Badges</li>
+          <li>Turn Data into Insights</li>
+          <li>Cyber-Security Online SIM</li>
+          <li>Complete Guide to Game Design</li>
+          <li>Esports Management</li>
+          <li>Game Programming Masterclass</li>
+          <li>Cisco Packet Tracer Badge</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="skills">
+    <h2>Software Skills</h2>
+    <div class="skills">
+       <div class="skills" style="flex-wrap: wrap;">
+  <div class="skill"><img src="https://img.icons8.com/?size=100&id=65231&format=png&color=000000" alt="Blender" style="width:20px;vertical-align:middle;margin-right:8px;">Blender</div>
+  <div class="skill"><img src="https://img.icons8.com/?size=100&id=EZQdGLNeo7JI&format=png&color=000000" alt="Canva" style="width:20px;vertical-align:middle;margin-right:8px;">Canva</div>
+  <div class="skill"><img src="https://img.icons8.com/?size=100&id=zfHRZ6i1Wg0U&format=png&color=000000" alt="Figma" style="width:20px;vertical-align:middle;margin-right:8px;">Figma</div>
+  <div class="skill"><img src="https://img.icons8.com/?size=100&id=44492&format=png&color=000000" alt="Epic Games" style="width:20px;vertical-align:middle;margin-right:8px;">Epic Games</div>
+   <div class="skill"><img src="https://img.icons8.com/?size=100&id=Of4lZV2lwBQI&format=png&color=000000" alt="Arduino" style="width:20px;vertical-align:middle;margin-right:8px;">Arduino</div>
+   <div class="skill"><img src="https://img.icons8.com/?size=100&id=T6XctcOVwqAb&format=png&color=000000" alt="Raspberry Pi" style="width:20px;vertical-align:middle;margin-right:8px;">Raspberry Pi</div>
+   <div class="skill"><img src="https://img.icons8.com/?size=100&id=eyShSycUjhR9&format=png&color=000000" alt="Cisco Packet Tracer" style="width:20px;vertical-align:middle;margin-right:8px;">Cisco Packet Tracer</div>
+  <div class="skill"><img src="https://cdn-icons-png.flaticon.com/512/5969/5969091.png" alt="XAMPP" style="width:20px;vertical-align:middle;margin-right:8px;">XAMPP</div>
+  <div class="skill"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968672.png" alt="Bootstrap" style="width:20px;vertical-align:middle;margin-right:8px;">Bootstrap</div>
+  <div class="skill"><img src="https://img.icons8.com/?size=100&id=v5rvJPTEfNiU&format=png&color=000000" alt="Microsoft 365" style="width:20px;vertical-align:middle;margin-right:8px;">Microsoft 365</div>
+  <div class="skill"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Git & GitHub" style="width:20px;vertical-align:middle;margin-right:8px;">Git & GitHub</div>
+  <div class="skill"><img src="https://img.icons8.com/?size=100&id=16btInyZvrVp&format=png&color=000000" alt="NetBeans" style="width:20px;vertical-align:middle;margin-right:8px;">Apache NetBeans</div>
+</div>
+  </section>
+  
+  
+  <section class="section" id="expertise">
+    <h2>Expertise</h2>
+    <div class="expertise-list">
+      <div class="expertise">Web Development</div>
+      <div class="expertise">UI/UX Design</div>
+      <div class="expertise">Problem Solving</div>
+      <div class="expertise">Database Management</div>
+      <div class="expertise">Team Collaboration</div>
+	  <div class="expertise">Game Creation</div>
+      <div class="expertise">Project Management</div>
+    </div>
+  </section>
+
+  <section class="section" id="hobbies">
+    <h2>Hobbies & Interests</h2>
+    <div class="hobbies-list">
+      <div class="hobby">Volunteering</div>
+      <div class="hobby">Creative Writing</div>
+      <div class="hobby">Chess</div>
+      <div class="hobby">Gaming</div>
+      <div class="hobby">Reading</div>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact">
+    <h2>Get in Touch</h2>
+    <div class="contact-box">
+      <div class="contact-item">
+        <img src="https://img.icons8.com/ios-filled/50/FFFFFF/email.png" alt="Email">
+        <span>lateefa.mmadi@gmail.com</span>
+      </div>
+	   <div class="contact-item">
+        <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Phone" />
+        <span>+27 65 929 1038</span>
+    </div>
+	 <div class="contact-item">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" />
+        <a href="https://www.linkedin.com/in/latifah-mmadi-080398259/" target="_blank">LinkedIn</a>
+      </div>
+	  <div class="contact-item">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733609.png" alt="GitHub" />
+        <a href="https://github.com/CodeCrafterTee" target="_blank">GitHub</a>
+      </div>
+	<div class="contact-item">
+        <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Address" />
+        <span>Carlswald, Midrand</span>
+      </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Latifah Mmadi. All Rights Reserved.
+  </footer>
+
+</body>
+</html>
